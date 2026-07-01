@@ -17,7 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
+admin.site.site_header = "Ecommerce Admin"
+admin.site.site_title = "Ecommerce Admin Portal"
+admin.site.index_title = "Welcome to Ecommerce Portal"
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('__debug__/', include('debug_toolbar.urls')),
+     path('', include('store.urls')),
 ]

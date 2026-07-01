@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.contrib.contenttypes.models import ContentType
+from store.models import Product, Collection, Customer, Order
+from tags.models import TaggedItem
+def say_hello(request):
+    # Fetch all products
+    # queryset=TaggedItem.objects.get_tags_for(Product, 1)
 
-# Create your views here.
+    return render(request, 'hello.html', {'name': 'Suraj'})
+    
+   
