@@ -1,5 +1,6 @@
+# venv\Scripts\activate
+# python manage.py runserver
 from django.contrib import admin,messages
-
 from django.contrib.contenttypes.admin import GenericTabularInline
 
 from django.db.models import Count
@@ -145,7 +146,7 @@ class OrderItemInline(admin.StackedInline):
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
     autocomplete_fields = ['customer']
-    list_display = [
+    list_display = [  
         'id',
         'placed_at',
         'customer',

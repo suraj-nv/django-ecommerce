@@ -24,5 +24,5 @@ admin.site.index_title = "Welcome to Ecommerce Portal"
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('__debug__/', include('debug_toolbar.urls')),
-     path('', include('store.urls')),
+     path('store/', include('store.urls')),
 ]
