@@ -449,7 +449,7 @@ print(f"{len(carts)} carts created.")
 # PART 8 - CART ITEMS
 # =====================================
 
-print("Creating cart items...")
+print("Creating cart items...") 
 
 products = list(Product.objects.all())
 
