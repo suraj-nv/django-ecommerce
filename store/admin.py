@@ -2,15 +2,17 @@
 # python manage.py runserver
 from django.contrib import admin,messages
 from django.contrib.contenttypes.admin import GenericTabularInline
-
+# from django.contrib.auth import UserAdmin as BaseUserAdmin
 from django.db.models import Count
 from django.urls import reverse
 from django.utils.html import format_html
-
+from . import models
 from tags.models import TaggedItem
 
-from . import models
-
+# from . import models
+# @admin.register(models.User)
+# class UserAdmin(BaseUserAdmin):
+#     pass
 class InventoryFilter(admin.SimpleListFilter):
     title = 'inventory'
     parameter_name = 'Inventory'

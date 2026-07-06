@@ -20,8 +20,9 @@ INSTALLED_APPS = [
     "rest_framework",
     "debug_toolbar",
     "tags",
-
+    "core_config",
     "store",
+    "likes",
 ]
 
 
@@ -112,3 +113,5 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
     
 }
+
+AUTH_USER_MODEL = "core_config.User"
